@@ -1,16 +1,8 @@
 <template>
 	<div>
 		<Navigation></Navigation>
-		<main class="container">
-			<h1 class="my-4">Стеллажи</h1>
-			<div class="row">
-				<div v-for="rackData in racks" :key="rackData.rack.id" class="col-6 col-md-4 col-lg-3">
-					<router-link class="rack" :to="`warehouse/racks/${rackData.rack.id}`">
-						<div>{{ rackData.rack.uid }}</div>
-            <div>{{ `Полки: ${rackData.shelvesInRack}` }}</div>
-					</router-link>
-				</div>
-			</div>
+		<main v-if="rackData" class="container">
+			<h1 class="my-4">Стеллаж {{ rackData.rack.uid }}</h1>
 		</main>
 	</div>
 </template>
@@ -21,15 +13,15 @@ import Navigation from "../components/Navigation.vue";
 export default {
 	data() {
 		return {
-			racks: []
+			rackData: null,
 		};
 	},
 
 	async mounted() {
 		let response;
 		try {
-			response = await this.axios.get("storage/racks");
-			this.racks = response.data;
+			response = await this.axios.get(`storage/racks/${this.$route.params.id}`);
+			this.rackData = response.data;
 		} catch (e) {
 			console.log(e);
 		}

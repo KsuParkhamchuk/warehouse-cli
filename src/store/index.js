@@ -11,5 +11,10 @@ export default new Vuex.Store({
       setUser (state, value) {
         state.user = value;
       }
+    },
+    getters: {
+      getUser: (state) => {
+        return state.user;
+      }
     }
   })

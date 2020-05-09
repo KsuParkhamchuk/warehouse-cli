@@ -1,30 +1,14 @@
 <template>
      <header class="header">
         <div class="row align-items-center">
-            <div class="burgerMenu">
-                <span id="burgerLine" class="burgerLine"></span>
-            </div>
-
-            <div id="burger__menu" class="burger__menu">
-            
-                <nav id="navigation" class="navigation">
-                    <div class="nav__Title">Навигация</div>
-                    <a href="#" class="nav__link">Склад</a>
-                    <a href="#" class="nav__link">Будущие поставки</a>
-                    <a href="#" class="nav__link">Приемка</a>
-                    <a href="#" class="nav__link">Отгрузка</a>
-                    <a href="#" class="nav__link">Приемка на производстве</a>
-                    <a href="#" class="nav__link">Панель админа</a>
-                </nav>
-                <div id="overlay" class="burger__menu--overlay"></div>
-            </div>
-
-
-            <div class="pageTitle">Склад</div>
+            <div class="pageTitle">Warehouse.by</div>
         </div>
         <div class="row m-0 px-0">
             <div class="pageItem__wrapper">
-                <a href="" class="pageItem__active">История</a>
+                <router-link to="/warehouse" class="pageItem">Склад</router-link>
+            </div>
+            <div class="pageItem__wrapper">
+                <router-link to="/history" class="pageItem">История</router-link>
             </div>
             <div class="pageItem__wrapper">
                 <a href="" class="pageItem">Отчеты</a>

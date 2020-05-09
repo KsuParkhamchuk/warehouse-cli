@@ -95,7 +95,12 @@ export default {
 }
 
 * {
+  /* font-family: "Roboto" !important; */
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 1600px !important;
 }
 
 img {
@@ -105,7 +110,6 @@ img {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto" !important;
 }
 
 .bold {
@@ -153,7 +157,6 @@ header .row {
 .pageTitle {
   font-size: 25px;
   font-weight: bold;
-  margin-left: 7%;
 }
 
 .pageItem {
@@ -161,21 +164,22 @@ header .row {
   font-weight: bold;
 
   &__wrapper {
-    width: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
     position: relative;
     text-align: center;
     text-transform: uppercase;
   }
 
   &:hover,
-  &__active,
-  &__active:hover {
+  &.router-link-active,
+  &.router-link-active:hover {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
   }
 
-  &__active:after {
+  &.router-link-active:after {
     content: "";
     width: -webkit-fill-available;
     height: 4px;
