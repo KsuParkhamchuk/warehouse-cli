@@ -8,10 +8,10 @@
                 <router-link to="/warehouse" class="pageItem">Склад</router-link>
             </div>
             <div class="pageItem__wrapper">
-                <router-link to="/history" class="pageItem">История</router-link>
+                <router-link to="/supplies" class="pageItem">Поставки</router-link>
             </div>
             <div class="pageItem__wrapper">
-                <a href="" class="pageItem">Отчеты</a>
+                <router-link to="/history" class="pageItem">История</router-link>
             </div>
         </div>
     </header>

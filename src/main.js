@@ -6,6 +6,8 @@ import router from './router'
 import VueCookies from 'vue-cookies'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import 'vue2-datepicker/index.css';
+import 'vue-select/dist/vue-select.css';
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);

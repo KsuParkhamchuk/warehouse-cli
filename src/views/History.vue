@@ -2,7 +2,7 @@
 	<div>
 		<Navigation></Navigation>
 		<main class="container">
-			<h1 class="my-4">История</h1>
+			<h1 class="my-5">История</h1>
 			<table class="table">
 				<thead>
 					<tr>

@@ -50,8 +50,7 @@ export default {
 					password: this.password
 				})
 				.then(response => {
-					console.log(response);
-					this.$store.commit("setUser", response.data);
+					this.$store.commit("setUser", response.data.user);
 					this.$cookies.set("token", response.data.accessToken);
 					this.$router.push("/warehouse").catch(err => err);
 				})

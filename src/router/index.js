@@ -7,6 +7,13 @@ import Warehouse from '../views/Warehouse.vue'
 import NotFound from '../views/NotFound.vue'
 import History from '../views/History'
 import Rack from '../views/Rack'
+import RackNew from '../views/RackNew'
+import Shelf from '../views/Shelf'
+import Supplies from '../views/Supplies'
+import NewSupply from '../views/SupplyNew'
+import Supply from '../views/Supply'
+
+import axios from 'axios'
 
 import store from '../store'
 
@@ -46,7 +53,47 @@ const routes = [
 		meta: {
 			requiresAuth: true
 		}
-	},
+    },
+    {
+		path: '/warehouse/add-new-rack',
+		name: 'newRack',
+		component: RackNew,
+		meta: {
+			requiresAuth: true
+		}
+    },
+    {
+		path: '/warehouse/shelves/:id',
+		name: 'shelf',
+		component: Shelf,
+		meta: {
+			requiresAuth: true
+		}
+    },
+    {
+		path: '/supplies',
+		name: 'supplies',
+		component: Supplies,
+		meta: {
+			requiresAuth: true
+		}
+    },
+    {
+		path: '/add-new-supply',
+		name: 'newSupply',
+		component: NewSupply,
+		meta: {
+			requiresAuth: true
+		}
+    },
+    {
+		path: '/supplies/:id',
+		name: 'supply',
+		component: Supply,
+		meta: {
+			requiresAuth: true
+		}
+    },
     {
         path: '*',
         component: NotFound
@@ -72,12 +119,13 @@ router.beforeEach(async (to, from, next) => {
             let user = store.getters.getUser;
             if (!user) {
                 try {
-                    let response = await this.axios.get('me');
+                    let response = await axios.get('users/me');
                     if (response.status == 200) {
                         store.commit('setUser', response.data);
                         next();
                     }
                 } catch (error) {
+                    console.log(error);
                     next({
                         path: '/login',
                         params: { nextUrl: to.fullPath }
