@@ -17,7 +17,7 @@
 							<th style="max-width: 50px; width: 50px;" scope="col">#</th>
 							<th style="max-width: 240px; width: 240px;" scope="col">Наименование</th>
 							<th style="max-width: 80px; width: 80px;" scope="col">Кол-во</th>
-							<th scope="col">Занимаемое место</th>
+							<th style="max-width: 200px; width: 200px;" scope="col">Занимаемое место</th>
 							<th scope="col">Действие</th>
 						</tr>
 					</thead>
@@ -70,11 +70,9 @@ export default {
 				`storage/shelves/${this.$route.params.id}`
 			);
 			this.shelfData = response.data;
-			console.log(response.data.items);
 		} catch (e) {
 			console.log(e);
 		}
-		console.log(response);
 	},
 
 	methods: {},

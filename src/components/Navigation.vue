@@ -11,6 +11,12 @@
                 <router-link to="/supplies" class="pageItem">Поставки</router-link>
             </div>
             <div class="pageItem__wrapper">
+                <router-link to="/items" class="pageItem">Товары</router-link>
+            </div>
+            <div class="pageItem__wrapper">
+                <router-link to="/partners" class="pageItem">Партнёры</router-link>
+            </div>
+            <div class="pageItem__wrapper">
                 <router-link to="/history" class="pageItem">История</router-link>
             </div>
         </div>
