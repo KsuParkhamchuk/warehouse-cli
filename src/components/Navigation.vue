@@ -11,6 +11,9 @@
                 <router-link to="/supplies" class="pageItem">Поставки</router-link>
             </div>
             <div class="pageItem__wrapper">
+                <router-link to="/shipments" class="pageItem">Отгрузки</router-link>
+            </div>
+            <div class="pageItem__wrapper">
                 <router-link to="/items" class="pageItem">Товары</router-link>
             </div>
             <div class="pageItem__wrapper">

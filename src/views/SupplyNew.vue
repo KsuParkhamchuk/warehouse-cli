@@ -35,7 +35,6 @@
 				</div>
 				<div class="mb-4">
 					<label>Запланировать на:</label>
-					<!-- <input v-model="newSupply.deliveryDate" class="form-control" type="text" /> -->
 					<div>
 						<date-picker v-model="newSupply.deliveryDate" type="date" valuetype="format"></date-picker>
 					</div>
@@ -48,8 +47,8 @@
 
 <script>
 import Navigation from "../components/Navigation.vue";
-import DatePicker from "vue2-datepicker";
 import vSelect from "vue-select";
+import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/locale/ru";
 
 export default {

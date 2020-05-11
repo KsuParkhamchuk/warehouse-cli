@@ -22,6 +22,8 @@ import Users from '../views/Users'
 import User from '../views/User'
 import UserNew from '../views/UserNew'
 import UserEdit from '../views/UserEdit'
+import ShipmentOperation from '../views/ShipmentOperation'
+import Shipments from '../views/Shipments'
 
 import axios from 'axios'
 
@@ -185,8 +187,24 @@ const routes = [
     }
   },
   {
+    path: '/shipment-operation/:itemId/:shelfId',
+    name: 'shipmentOperation',
+    component: ShipmentOperation,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
     path: '*',
     component: NotFound
+  },
+  {
+    path: '/shipments',
+    name: 'shipments',
+    component: Shipments,
+    meta: {
+      requiresAuth: true
+    }
   },
 ]
 

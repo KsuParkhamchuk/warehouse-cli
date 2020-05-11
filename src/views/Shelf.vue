@@ -28,7 +28,7 @@
 							<td>{{ itemData.amount }}</td>
 							<td>{{ itemData.amount * itemData.item.size }}</td>
 							<td>
-								<router-link class="btn btn-primary btn-sm" to="">Отгрузить</router-link>
+								<router-link class="btn btn-primary btn-sm" :to="`/shipment-operation/${itemData.item.id}/${shelfData.shelf.id}`">Отгрузить</router-link>
 							</td>
 						</tr>
 					</tbody>
