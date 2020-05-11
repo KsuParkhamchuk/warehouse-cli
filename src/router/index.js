@@ -24,6 +24,7 @@ import UserNew from '../views/UserNew'
 import UserEdit from '../views/UserEdit'
 import ShipmentOperation from '../views/ShipmentOperation'
 import Shipments from '../views/Shipments'
+import AcceptSupply from '../views/AcceptSupply'
 
 import axios from 'axios'
 
@@ -202,6 +203,14 @@ const routes = [
     path: '/shipments',
     name: 'shipments',
     component: Shipments,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/accept-supply/:id',
+    name: 'acceptSupply',
+    component: AcceptSupply,
     meta: {
       requiresAuth: true
     }

@@ -13,7 +13,7 @@
 				<p class="mb-2">Потребуется места: {{ formatedSupply.amount * formatedSupply.item.size }}</p>
 				<hr>
 				<div v-if="formatedSupply.isOk === null">
-					<p class="text-muted">Товар уже на месте?<br> Давайте оформим и разместим его: <button class="btn btn-success btn-sm">Принять поставку</button></p>
+					<p class="text-muted">Товар уже на месте?<br> Давайте оформим и разместим его: <router-link :to="`/accept-supply/${supply.id}`" class="btn btn-success btn-sm">Принять поставку</router-link></p>
 				</div>
 				<div v-if="formatedSupply.isOk !== null">
 					<h4 class="mb-4">Информация о приёмке</h4>

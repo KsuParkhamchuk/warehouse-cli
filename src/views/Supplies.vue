@@ -71,7 +71,7 @@ export default {
 		return {
 			supplies: null,
 			searchSettings: {
-				findFutureSupplies: false,
+				findFutureSupplies: true,
 				findAcceptedSupplies: false
 			}
 		};
