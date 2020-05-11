@@ -18,6 +18,10 @@ import PartnerNew from '../views/PartnerNew'
 import Items from '../views/Items'
 import Item from '../views/Item'
 import ItemNew from '../views/ItemNew'
+import Users from '../views/Users'
+import User from '../views/User'
+import UserNew from '../views/UserNew'
+import UserEdit from '../views/UserEdit'
 
 import axios from 'axios'
 
@@ -144,6 +148,38 @@ const routes = [
     path: '/add-new-item',
     name: 'newItem',
     component: ItemNew,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/users',
+    name: 'users',
+    component: Users,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/add-new-user',
+    name: 'newUser',
+    component: UserNew,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/edit-user/:id',
+    name: 'editUser',
+    component: UserEdit,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/users/:id',
+    name: 'users',
+    component: User,
     meta: {
       requiresAuth: true
     }

@@ -16,9 +16,22 @@
             <div class="pageItem__wrapper">
                 <router-link to="/partners" class="pageItem">Партнёры</router-link>
             </div>
-            <div class="pageItem__wrapper">
+            <div v-if="isAdmin" class="pageItem__wrapper">
+                <router-link to="/users" class="pageItem">Пользователи</router-link>
+            </div>
+            <div v-if="isAdmin" class="pageItem__wrapper">
                 <router-link to="/history" class="pageItem">История</router-link>
             </div>
         </div>
     </header>
 </template>
+
+<script>
+export default {
+    data() {
+		return {
+			isAdmin: this.$store.getters.isAdmin,
+		};
+	},
+}
+</script>
